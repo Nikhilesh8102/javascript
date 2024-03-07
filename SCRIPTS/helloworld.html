@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+    <p>before script</p>
+     
+    <p>after script</p>
+    <!-- <script>
+        alert("Hello world!")
+      </script> -->
+
+    <!-- <script src="./hwscript.js"></script> -->
+
+    <!-- try both these methods -->
+
+    <!-- here the script tag containes the js code to be inserted or used by the page.There are two ways one is to write the code inside the script tag directly inside the html body depending on the use case(which we will learn later) or write it in a .js file and include it in the html file either in head or body tag depending on the use case(which we will learn later) -->
+
+    <script src="./hwscript.js">alert("hello")//this content is ignored and we can only see the alert message written inside the src file</script>
+
+
+                    <!-- !!!NOTE!!! 
+
+
+                
+
+     If src is set, the script content is ignored.
+A single <script> tag can’t have both the src attribute and code inside.
+
+This won’t work:
+
+<script src="file.js">
+  alert(1); // the content is ignored, because src is set
+</script>
+We must choose either an external <script src="…"> or a regular <script> with code. -->
+
+    <!-- there are two attributes called as type and language which describe the type and language of the language like type=text/javasript and language = javascript. ascially they were usded in earlier html versions and is not needed anymore  and one more thing in the earlier days few browsers were not able to parse script tags so they comment the code inside it which is not the case with modern browsers so if you find commented code inside script tag then it was for browsers 15 years ago -->
+
+
+                 <!-- COMMENTS AND CODE STRUCTURE in JS
+
+                 singleline comments start with //
+                 multiline commetns enclosed in /* */ 
+
+                 always put semicolon at end of each line -->
+</body>
+</html>
