@@ -91,6 +91,8 @@ const nested_obj = {
 
 console.log(Object.keys(nested_obj));//keys in nested_obj are returned in array manner
 console.log(Object.values(nested_obj));//values of nested_obj are returned in array manner
+console.log(Object.entries(nested_obj));//output an array having each key value of the object as an array as elemtns
+
 console.log(nested_obj.hasOwnProperty("name")); //checks for name property in nested_obj and since it doesnt have returns false
 
              //OBJECT DESTRUCTURING
