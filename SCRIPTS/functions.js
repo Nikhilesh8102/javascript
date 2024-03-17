@@ -189,12 +189,73 @@ Given these factors, making arrow functions anonymous by design simplifies their
 // chai()
 //the above can also be written as 
 
-(function chai(){
-    console.log("db connected");
-})();//if u want to write 2 iife one after other u must end the first iife with semicolon 
+// (function chai(){
+//     console.log("db connected");
+// })();//if u want to write 2 iife one after other u must end the first iife with semicolon 
 
-( () => {
-    console.log("db connected");
-})()
+// ( () => {
+//     console.log("db connected");
+// })();
 
 
+let user = {
+    name: "John",
+    hi(){
+       console.log(123); 
+    },
+    bye(){
+       console.log((this))
+     }
+     
+  };
+  //console.log(user.hi);//[Function: hi]
+  /*console.log(user.hi());{ name: 'John', hi: [Function: hi], bye: [Function: bye] }
+  undefined(beccuase the hi function is not returning anything so implicitly its undefined*/
+  //user
+ // console.log(this);//{}
+  
+//user.a(); // works
+//console.log(user.a()==user.c());//true
+  
+  // now let's call user.hi or user.bye depending on the name
+ /* (user.name == "Johnm" ? user.hi : user.bye)(); // Error!
+  user.bye();*/
+
+//   console.log(Object.keys(user));
+//   console.log(Object.values(user));
+//   console.log(Object.entries(user));
+
+
+
+// function greet() {
+    
+//     console.log(`Hello, ${this.name}!`);
+//   }
+//   greet();
+
+//   function Person(name) {
+//     this.name = name;
+//   }
+//   const person = new Person('Bob');
+//   console.log(person.name); // Output: Bob
+
+//   const obj = {
+//     name: 'David',
+//     outerFunction: function() {
+//       console.log(`Outer function: Hello, ${this.name}!`);
+  
+//       function innerFunction() {
+//         console.log(`Inner function: Hello, ${this.name}!`);
+//       }
+  
+//       innerFunction(); // Call innerFunction immediately after it's defined
+//     }
+//   };
+  
+//   obj.outerFunction();
+
+
+function printme(item){
+    console.log(item);
+}
+printme;
